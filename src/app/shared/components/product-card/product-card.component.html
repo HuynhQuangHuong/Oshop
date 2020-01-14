@@ -1,0 +1,37 @@
+<div *ngIf="product.title" class="card box_Cart">
+    <a (click)="open(content)" class="img" [ngbTooltip]="['View ' + product.title + ' detail']" [style.backgroundImage]="'url('+ product.imageUrl +')'">
+    </a>
+    <div class="card-body text-align">
+        <h5 class="card-title">{{ product.title }}</h5>
+        <p class="card-text">{{ product.price | currency:'USD':'symbol' }}</p>
+    </div>
+    <div *ngIf="showActions && shoppingCart">
+        <button *ngIf="shoppingCart.getQuantity(product) === 0; else updateQuantity" (click)="addToCart()" class="btn btn-secondary btn-block btn_cart">Add To Cart</button>
+        <ng-template #updateQuantity>
+            <product-quantity [product]="product" [shopping-cart]="shoppingCart"></product-quantity>
+        </ng-template>
+    </div>
+</div>
+<ng-template #content let-modal>
+
+    <!-- view product-cart -->
+    <div class="modal-body">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-7">
+                    <img *ngIf="product.imageUrl" class="img1" [style.backgroundImage]="'url('+ product.imageUrl +')'">
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-5 box_product">
+                    <h4 class="title_product">{{ product.title}}</h4>
+                    <span class="text_product"> {{ product.price | currency }}</span>
+                    <div *ngIf="showActions && shoppingCart">
+                        <button *ngIf="shoppingCart.getQuantity(product) === 0; else updateQuantity" (click)="addToCart()" class="btn btn-secondary btn-block btn_cart">Add to Cart</button>
+                        <ng-template #updateQuantity>
+                            <product-quantity [product]="product" [shopping-cart]="shoppingCart"></product-quantity>
+                        </ng-template>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>

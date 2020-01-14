@@ -1,0 +1,29 @@
+<div class="box_image">
+
+</div>
+<div class="container container-body in-my">
+    <p>
+        <a routerLink="/admin/products/new" class="btn btn-primary">New Product</a>
+    </p>
+    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table row-border hover">
+        <thead>
+            <tr class="alert alert-dark" role="alert" style="text-align:center;color: red">
+                <th class="border border-dark">Id</th>
+                <th class="border border-dark">Title</th>
+                <th class="border border-dark">Price</th>
+                <th class="border border-dark">Edit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of filteredProducts; index as i">
+                <td class="border border-dark" style="text-align: center;">{{ i }}</td>
+                <td class="border border-dark" style="text-align: center;">{{ p.title }}</td>
+                <td class="border border-dark" style="text-align: center;">{{ p.price }}$</td>
+                <td class="border border-dark" style="text-align: center;" style="text-align: center;">
+                    <a [routerLink]="['/admin/products/', p.key]" class="btn btn-danger">Edit</a>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>

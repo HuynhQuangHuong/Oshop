@@ -1,0 +1,12 @@
+<div class="to" fxLayout="row" fxLayoutAlign="center center">
+    <form class="form" #f="ngForm" (ngSubmit)="signUp(f.value)">
+        <h2>SignUp</h2>
+        <label style="margin-left: -150px;">Tên</label>
+        <input #username="ngModel" ngModel type="text" name="username">
+        <label style="margin-left: -150px">Email</label>
+        <input #email="ngModel" ngModel type="email" name="email">
+        <label>Password</label>
+        <input #password="ngModel" ngModel type="password" name="password">
+        <input id="submit" type="submit" value="register" name="Register">
+    </form>
+</div>

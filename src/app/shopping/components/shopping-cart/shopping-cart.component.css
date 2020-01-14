@@ -1,0 +1,74 @@
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-size: cover;
+}
+
+.card {
+    margin-bottom: 80px;
+}
+
+.td-title {
+    padding-top: 37px;
+    font-size: 20px;
+}
+
+.text-main {
+    margin-top: 35px;
+    font-size: 25px;
+    text-align: center;
+    color: darkmagenta;
+}
+
+.clear-my {
+    background-color: aquamarine;
+}
+
+.text-right {
+    font-size: large;
+    color: darkred;
+}
+
+.btn-my {
+    margin-bottom: 20px;
+    background-color: #FF4136;
+    width: 241px;
+    text-align: center;
+    height: 64px;
+    position: absolute;
+    left: 50%;
+    top: 108%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn-my span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.btn-my span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.btn-my:hover span {
+    padding-right: 25px;
+}
+
+.btn-my:hover {
+    background-color: rgb(204, 47, 39);
+}
+
+.btn-my:hover span:after {
+    opacity: 1;
+    right: 0;
+}

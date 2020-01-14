@@ -1,0 +1,38 @@
+.text-in-cart {
+    margin-top: 14px;
+}
+
+.buton-my {
+    height: 55px;
+}
+
+.box {
+    margin: 0 auto 20px;
+}
+
+.icon_button {
+    background-color: #000;
+    width: 40px;
+    height: 40px;
+    padding: 13px;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.text_quantity {
+    padding-top: 13px;
+    text-transform: capitalize;
+}
+
+.btn:focus {
+    box-shadow: unset;
+}
+
+i:hover {
+    background-color: #090909e3;
+}
+
+.no-gutters {
+    height: 40px;
+    margin: 0 auto 20px;
+}

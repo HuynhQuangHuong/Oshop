@@ -1,0 +1,10 @@
+<div class="row no-gutters">
+
+    <div class="row justify-content-center box">
+        <button type="button" class="btn" (click)="removeFromCart()"><i
+            class="fas fa-minus icon_button"></i></button>
+        <span class="text_quantity">{{ shoppingCart.getQuantity(product) }} in cart</span>
+        <button type="button" class="btn"><i class="fas fa-plus icon_button"
+            (click)="addToCart()"></i></button>
+    </div>
+</div>
